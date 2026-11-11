@@ -14,6 +14,14 @@
 		*:before,
 		*:after {
 			box-sizing: inherit;
+			scrollbar-width: none;
+			-ms-overflow-style: none;
+		}
+
+		*::-webkit-scrollbar {
+			display: none;
+			width: 0;
+			height: 0;
 		}
 
 		html,
@@ -160,10 +168,16 @@
 			left: 0;
 			z-index: 10;
 			overflow-y: auto;
+			scrollbar-width: none;
+			-ms-overflow-style: none;
 			background: #000;
 			opacity: 0;
 			visibility: hidden;
 			transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+		}
+
+		.projects-view::-webkit-scrollbar {
+			display: none;
 		}
 
 		.projects-view.open {
@@ -321,52 +335,52 @@
 			<ul class="project-list">
 				<li class="project">
 					<h3>Plenum Theory: On the Origin of Spacetime</h3>
-					<p class="project-desc">Independent theoretical physics research proposing a unified algebraic framework for spacetime, the Standard Model, and cosmological evolution from a single algebraic postulate. Across 55 theorems with zero free parameters, the manuscript derives four-dimensional spacetime (d = 4) and exactly three fermion generations as structural necessities of the underlying algebra, recovers the Standard Model gauge structure and mixing hierarchies, yields zero-parameter derivations of inflationary observables matching Planck 2018 to 0.35&sigma;, and predicts dynamical dark energy matching DESI DR2 (2025) to 0.15&sigma;.</p>
+					<p class="project-desc">Independent theoretical physics research proposing a unified algebraic framework for spacetime, the Standard Model, and cosmological evolution from a single postulate. Across 55 zero-parameter theorems, it derives four-dimensional spacetime (d = 4), three fermion generations, Standard Model gauge structure and mixing hierarchies, inflationary observables matching Planck 2018 to 0.35&sigma;, and dynamical dark energy matching DESI DR2 (2025) to 0.15&sigma;.</p>
 				</li>
 				<li class="project">
 					<h3>Meshless Radial Point Interpolation for Self-Consistent Maxwell–Schrödinger Modelling of Nanoscale Devices</h3>
-					<p class="project-desc">Research formulating a meshless radial point interpolation method (RPIM) for the coupled Maxwell–Schrödinger modelling of classical electromagnetic fields and quantum-mechanical systems in nanoscale devices, presented at the Science Undergraduate Research Conference 2026 at Azim Premji University. Building on an FDTD study of the semiclassical framework using a potential-based formulation, Lorenz gauge, and PML boundaries, the work integrates quantum algorithms executed on IBM’s large-scale quantum computing infrastructure with AI/ML techniques for quantum state analysis, simulation optimization, and computational microwave imaging.</p>
+					<p class="project-desc">Presented at the Science Undergraduate Research Conference 2026 (Azim Premji University), this work formulates a meshless radial point interpolation method (RPIM) for self-consistent Maxwell–Schrödinger modelling of classical electromagnetic fields and quantum systems in nanoscale devices. Building on a semiclassical FDTD framework (potential formulation, Lorenz gauge, PML boundaries), it integrates quantum algorithms on IBM’s quantum infrastructure with AI/ML for quantum state analysis, simulation optimization, and computational microwave imaging.</p>
+				</li>
+				<li class="project">
+					<h3><a href="https://starbase-x.vercel.app/" target="_blank" rel="noopener">Starbase</a></h3>
+					<p class="project-desc">A centralized material selection and recommendation engine for engineering and research, drawing on 6.1 million source-traced records across metals, polymers, ceramics, and composites. Replacing manual handbook searches, Starbase queries application requirements—operating conditions, load, temperature range, corrosion resistance, weight, manufacturing process, and budget—to return optimal materials with full property justifications and original sources.</p>
 				</li>
 				<li class="project">
 					<h3><a href="https://celestium-x.vercel.app/" target="_blank" rel="noopener">Celestium</a></h3>
-					<p class="project-desc">The Modular Aerial Lift Utility System (MALUS) is Celestium’s research program for electric and hybrid-electric vertical flight. Within it, Taraka X-1 is a medical utility aircraft engineered from the ground up around patient physiology, rapid emergency extraction, and uninterrupted critical care in transit.</p>
+					<p class="project-desc">My vision for a next-generation aerospace company advancing electric and hybrid-electric vertical flight through the Modular Aerial Lift Utility System (MALUS). Within it, Taraka X-1 is a medical utility aircraft engineered with the patient at the heart of its design for rapid emergency extraction and uninterrupted in-transit critical care.</p>
 				</li>
 				<li class="project">
 					<h3>Mars Rover Dust Mitigation</h3>
-					<p class="project-desc">An ongoing mission study assigned by the Vikram Sarabhai Space Centre (VSSC) under Prof. Murali Krishnan K H and Dr. Sreeja S. Designs active and passive dust-mitigation systems to prevent particulate deposition on the solar panels of the rover proposed for ISRO’s Mangalyaan-2 mission, safeguarding continuous power generation across a long-duration surface mission in the Martian dust environment.</p>
+					<p class="project-desc">An ongoing mission study assigned by the Vikram Sarabhai Space Centre (VSSC) under Prof. Murali Krishnan K H and Dr. Sreeja S. Engineers dust-mitigation systems for the solar panels of ISRO’s proposed Mangalyaan-2 rover, safeguarding continuous power generation across long-duration surface operations in the Martian dust environment.</p>
 				</li>
 				<li class="project">
 					<h3><a href="https://spiritus.vercel.app/intelligence" target="_blank" rel="noopener">Next-generation Environment for Human Advancement (NEHA)</a></h3>
-					<p class="project-desc">Built around the Triadic Core—three conceptual pillars outlined on its website uniting an Intelligent Core for multimodal predictive synthesis, an Emotional Core for perceiving unspoken human nuance with empathy, and a Wisdom Core for cultivating inner stillness—NEHA serves as the clinical and population-health intelligence engine behind Vespera. Working beside the physician in the consulting room, it pairs ambient consultation capture, one-action “Magic Button” administrative automation, and real-time “Magic Whispers” decision support with simulation-driven Digital Twin, Time Machine, and HoloPatient tools and population-scale early-warning analytics. Beyond clinical intelligence, NEHA’s research is aimed at using biotechnology to power its architecture with artificial brain cells, driven by a vision of interfacing directly with the human brain to resolve human bandwidth limits and unleash maximum cognitive capacities.</p>
+					<p class="project-desc">NEHA is the intelligence behind Vespera, working beside the physician in the consulting room as its reach extends from a single patient to the health of a whole population. Built on a three-pillar conceptual design, its research is aimed at using biotechnology to power it with artificial brain cells—driven by a vision of interfacing with the human brain to resolve human bandwidth limits and unleash maximum cognitive capacities.</p>
 				</li>
 				<li class="project">
 					<h3>Vespera</h3>
-					<p class="project-desc">An AI-driven healthcare orchestration platform powered by NEHA that carries a patient through the entire continuum of care. It integrates appointment scheduling, predictive hospital availability, dynamic queue tracking, cab and ambulance transport logistics, medicine delivery, insurance integration, and longitudinal medical-record management via privacy-preserving Universal and Temporary Vespera IDs, alongside a unified patient interface for prescription management, lab integration, home-consultation scheduling, real-time care navigation, and secure, time-limited clinical data sharing with providers and pharmacies. For clinicians and public health, Vespera delivers ambient consultation capture for auto-generated documentation, one-action “Magic Button” administrative automation, real-time “Magic Whispers” decision-support insights, Digital Twin models for pre-intervention testing, Time Machine longitudinal outcome forecasting and protocol comparison, HoloPatient mixed-reality visualization for procedure validation with quantified risk prediction, and population-scale early-warning disease analytics.</p>
+					<p class="project-desc">An AI-driven healthcare orchestration platform powered by NEHA uniting the entire continuum of care. For patients, it integrates appointment scheduling, predictive hospital availability, dynamic queue tracking, cab and ambulance logistics, prescription and lab integration, home consultations, medicine delivery, real-time care navigation, and longitudinal medical records via privacy-preserving Universal and Temporary Vespera IDs with time-limited clinical sharing. For clinicians and public health, it delivers ambient consultation capture for auto-generated documentation, one-action “Magic Button” automation, real-time “Magic Whispers” multimodal decision support, Digital Twin pre-intervention testing, Time Machine longitudinal outcome forecasting, HoloPatient mixed-reality procedure validation with quantified risk prediction, and anonymized population-scale early-warning analytics.</p>
 				</li>
 				<li class="project">
 					<h3><a href="https://spiritus.vercel.app/" target="_blank" rel="noopener">Spiritus</a></h3>
 					<p class="project-meta">First Prize at Code reCET 2.0 and InnoFEST25, 2025</p>
-					<p class="project-desc">Spiritus offers direct access to a global network of clinicians, psychotherapists, and licensed mental health professionals, delivering tailored, evidence-based support in various languages for personal transformation and the pursuit of a meaningful existence. Built with React, Node.js, Express, MongoDB, and Gemini, it provides compassionate, accessible online and offline therapy for depression, anxiety, PTSD, stress-related burnout, chronic loneliness, and insomnia to individuals, couples, and teenagers worldwide.</p>
+					<p class="project-desc">Direct access to a global network of clinicians, psychotherapists, and licensed mental health professionals delivering tailored, evidence-based online and offline therapy in the user’s own language. Built with React, Node.js, Express, MongoDB, and Gemini for personal transformation and a meaningful life, Spiritus supports individuals, couples, and teenagers worldwide across depression, anxiety, PTSD, burnout, chronic loneliness, and insomnia.</p>
 				</li>
 				<li class="project">
 					<h3>Genus</h3>
-					<p class="project-desc">A cross-platform pet marketplace and community built with Flutter and Firebase that enables seamless connections between buyers, sellers, and pet enthusiasts through intelligent matching algorithms and geolocation-based discovery. It features secure authentication with role-based access control, integrated payment processing, and real-time messaging to bring people who love animals together.</p>
+					<p class="project-desc">A cross-platform pet marketplace and community built with Flutter and Firebase connecting buyers, sellers, and animal enthusiasts through intelligent matching algorithms and geolocation-based discovery, complete with role-based access control, integrated payments, and real-time messaging.</p>
 				</li>
 				<li class="project">
 					<h3><a href="https://socius-eta.vercel.app/" target="_blank" rel="noopener">Socius</a></h3>
-					<p class="project-desc">A mobile-first hyperlocal platform enabling short-term borrowing of everyday goods within verified communities, digitising informal neighborly sharing to reduce unnecessary purchases and promote sustainable access over ownership. Adapting the global “Library of Things” circular-economy model to Indian urban dynamics, Socius combines walkable geofenced discovery across apartments, campuses, and neighbourhood clusters with searchable community inventories, booking management, digital agreements, dispute-resolution tooling, refundable escrow-style deposits, multi-factor verification, and gamified “karma” incentives.</p>
+					<p class="project-desc">A mobile-first hyperlocal circular-economy platform adapting the “Library of Things” model to Indian urban communities for short-term borrowing of everyday goods. Socius combines walkable geofenced discovery across apartments, campuses, and neighborhood clusters with searchable inventories, automated booking, digital agreements, dispute resolution, refundable escrow deposits, multi-factor verification, and gamified “karma” incentives.</p>
 				</li>
 				<li class="project">
 					<h3><a href="https://costal-adviser.vercel.app/" target="_blank" rel="noopener">Coastal Adviser</a></h3>
-					<p class="project-desc">An AI-powered decision-support platform for Kerala’s coastal fishing communities, integrating real-time maritime safety, market intelligence, and government welfare access with a low-latency voice-to-voice interface using Sarvam AI and OpenAI across all local languages and English for non-literate accessibility. It pairs an automated Playwright pipeline scraping INCOIS advisories (Potential Fishing Zones, wave height, and wind speed across 20+ coastal locations) with 7-day fish market price trend analysis for optimal selling versus cold-storage strategies, a zero-dependency RAG system for semantic search across state and central welfare schemes, and a geofenced hyperlocal personalization engine tailored by boat type and preferred species.</p>
-				</li>
-				<li class="project">
-					<h3><a href="https://starbase-x.vercel.app/" target="_blank" rel="noopener">Starbase</a></h3>
-					<p class="project-desc">A database-driven material selection and recommendation system built for engineering and research, drawing on 6.1 million rows of source-traced data across metals, polymers, ceramics, and composites to help students, engineers, designers, and researchers identify the optimal material for any application. Replacing manual searches through material handbooks, Starbase queries user requirements—application, operating conditions, load, temperature range, corrosion resistance, weight, manufacturing process, and budget—against a centralised, scalable database to return the best-matching materials with their key properties, justifications, and original sources.</p>
+					<p class="project-desc">An AI-powered decision-support companion for Kerala’s coastal fishing communities featuring a low-latency Sarvam AI and OpenAI voice-to-voice interface across all local languages and English for non-literate accessibility. Integrates an automated Playwright pipeline scraping INCOIS advisories (Potential Fishing Zones, wave height, and wind speed across 20+ coastal locations), 7-day fish market price trend analysis for selling versus cold-storage decisions, zero-dependency RAG search over state and central welfare schemes, and geofenced vessel- and species-specific intelligence.</p>
 				</li>
 				<li class="project">
 					<h3>Medical Ward</h3>
-					<p class="project-desc">Initiated at the request of the Government Medical College Hospital to resolve its acute bedding crisis—an effort that goes beyond bed allocation to rethink the medical ward from its roots up, reimagining how ward spaces, care workflows, and inpatient infrastructure work together to serve patients directly.</p>
+					<p class="project-desc">Initiated at the request of the Government Medical College Hospital to resolve its acute bedding crisis—going beyond bed allocation to rethink the medical ward from its roots up, reimagining ward architecture, care workflows, and inpatient infrastructure to serve patients directly.</p>
 				</li>
 				<li class="project">
 					<h3>Sudarshana</h3>
@@ -380,7 +394,7 @@
 				</li>
 				<li class="project">
 					<h3>Angelus</h3>
-					<p class="project-desc">The third-stage biotechnology frontier following Spiritus and Vespera, moving beyond clinical treatment toward fundamental biological advancement. Angelus focuses on pioneering gene editing, cellular agriculture, and novel bio-engineering to eliminate disease at its root, build a sustainable future for humanity, and unbind human potential.</p>
+					<p class="project-desc">The third-stage biotechnology frontier following Spiritus and Vespera, moving beyond clinical treatment toward fundamental biological advancement through gene editing, cellular agriculture, and novel bio-engineering to eliminate disease at its root, build a sustainable future, and unbind human potential.</p>
 				</li>
 			</ul>
 		</div>
