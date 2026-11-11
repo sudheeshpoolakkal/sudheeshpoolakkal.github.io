@@ -147,6 +147,127 @@
 			font-weight: 400;
 		}
 
+		a:focus-visible {
+			outline: 1px solid rgba(255, 255, 255, 0.6);
+			outline-offset: 4px;
+		}
+
+		.projects-view {
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 10;
+			overflow-y: auto;
+			background: #000;
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+		}
+
+		.projects-view.open {
+			opacity: 1;
+			visibility: visible;
+			transition: opacity 0.3s ease;
+		}
+
+		.projects-view:focus {
+			outline: none;
+		}
+
+		.projects-inner {
+			max-width: 1200px;
+			padding: 8vmin;
+		}
+
+		.project-list {
+			list-style: none;
+			margin: 6vmin 0 0;
+			padding: 0;
+		}
+
+		.project {
+			padding: 3rem 0 3.4rem;
+			border-top: 1px solid rgba(255, 255, 255, 0.12);
+		}
+
+		.project h3 {
+			margin: 0;
+			font-size: 2.8rem;
+			font-weight: 700;
+			line-height: 1.25em;
+			color: rgba(255, 255, 255, 0.8);
+		}
+
+		.project h3 a {
+			text-decoration: underline;
+			text-decoration-color: rgba(255, 255, 255, 0.3);
+			text-decoration-thickness: 1px;
+			text-underline-offset: 0.35em;
+		}
+
+		.project h3 a:hover {
+			color: #fff;
+			text-decoration-color: rgba(255, 255, 255, 0.8);
+		}
+
+		.project-meta {
+			margin: 0.6rem 0 0;
+			font-size: 1.6rem;
+			font-weight: 400;
+			line-height: 1.5em;
+			color: #8a8a8a;
+		}
+
+		.project-desc {
+			max-width: 66ch;
+			margin: 1.4rem 0 0;
+			font-size: 2rem;
+		}
+
+		.redaction {
+			max-width: 66ch;
+			margin: 1.8rem 0 0;
+		}
+
+		.redaction span {
+			display: block;
+			height: 1.5rem;
+			margin: 0 0 1rem;
+			background: rgba(255, 255, 255, 0.14);
+		}
+
+		.redaction span:nth-child(1) {
+			width: 96%;
+		}
+
+		.redaction span:nth-child(2) {
+			width: 82%;
+		}
+
+		.redaction span:nth-child(3) {
+			width: 54%;
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+
+			.projects-view,
+			.projects-view.open {
+				transition: none;
+			}
+		}
+
+		@media (max-width: 800px) {
+			.project h3 {
+				font-size: 2.4rem;
+			}
+
+			.project-desc {
+				font-size: 1.8rem;
+			}
+		}
+
 		@media (max-width: 800px) {
 			h1 {
 				font-size: 4rem;
@@ -185,10 +306,128 @@
 		<nav>
 			<a href="mailto:sudheeshpoolakkal007@gmail.com" target="_blank">Email</a>
 			<a href="https://sudheeshpoolakkal.github.io/files/sudheesh-resume.pdf" target="_blank">Resume</a>
+			<a href="#projects">Projects</a>
 			<a href="https://github.com/sudheeshpoolakkal" target="_blank">GitHub</a>
 			<a href="https://linkedin.com/in/sudheeshpoolakkal" target="_blank">LinkedIn</a>
 		</nav>
 	</section>
+
+	<div class="projects-view" id="projects" role="region" aria-label="Projects" tabindex="-1">
+		<div class="projects-inner">
+			<header>
+				<h1>Projects</h1>
+			</header>
+
+			<ul class="project-list">
+				<li class="project">
+					<h3>Plenum Theory: On the Origin of Spacetime</h3>
+					<p class="project-desc">Independent theoretical physics research proposing a unified algebraic framework for spacetime, the Standard Model, and cosmological evolution from a single algebraic postulate. Across 55 theorems with zero free parameters, the manuscript derives four-dimensional spacetime (d = 4) and exactly three fermion generations as structural necessities of the underlying algebra, recovers the Standard Model gauge structure and mixing hierarchies, yields zero-parameter derivations of inflationary observables matching Planck 2018 to 0.35&sigma;, and predicts dynamical dark energy matching DESI DR2 (2025) to 0.15&sigma;.</p>
+				</li>
+				<li class="project">
+					<h3>Meshless Radial Point Interpolation for Self-Consistent Maxwell–Schrödinger Modelling of Nanoscale Devices</h3>
+					<p class="project-desc">Research formulating a meshless radial point interpolation method (RPIM) for the coupled Maxwell–Schrödinger modelling of classical electromagnetic fields and quantum-mechanical systems in nanoscale devices, presented at the Science Undergraduate Research Conference 2026 at Azim Premji University. Building on an FDTD study of the semiclassical framework using a potential-based formulation, Lorenz gauge, and PML boundaries, the work integrates quantum algorithms executed on IBM’s large-scale quantum computing infrastructure with AI/ML techniques for quantum state analysis, simulation optimization, and computational microwave imaging.</p>
+				</li>
+				<li class="project">
+					<h3><a href="https://celestium-x.vercel.app/" target="_blank" rel="noopener">Celestium</a></h3>
+					<p class="project-desc">The Modular Aerial Lift Utility System (MALUS) is Celestium’s research program for electric and hybrid-electric vertical flight. Within it, Taraka X-1 is a medical utility aircraft engineered from the ground up around patient physiology, rapid emergency extraction, and uninterrupted critical care in transit.</p>
+				</li>
+				<li class="project">
+					<h3>Mars Rover Dust Mitigation</h3>
+					<p class="project-desc">An ongoing mission study assigned by the Vikram Sarabhai Space Centre (VSSC) under Prof. Murali Krishnan K H and Dr. Sreeja S. Designs active and passive dust-mitigation systems to prevent particulate deposition on the solar panels of the rover proposed for ISRO’s Mangalyaan-2 mission, safeguarding continuous power generation across a long-duration surface mission in the Martian dust environment.</p>
+				</li>
+				<li class="project">
+					<h3><a href="https://spiritus.vercel.app/intelligence" target="_blank" rel="noopener">Next-generation Environment for Human Advancement (NEHA)</a></h3>
+					<p class="project-desc">Built around the Triadic Core—three conceptual pillars outlined on its website uniting an Intelligent Core for multimodal predictive synthesis, an Emotional Core for perceiving unspoken human nuance with empathy, and a Wisdom Core for cultivating inner stillness—NEHA serves as the clinical and population-health intelligence engine behind Vespera. Working beside the physician in the consulting room, it pairs ambient consultation capture, one-action “Magic Button” administrative automation, and real-time “Magic Whispers” decision support with simulation-driven Digital Twin, Time Machine, and HoloPatient tools and population-scale early-warning analytics. Beyond clinical intelligence, NEHA’s research is aimed at using biotechnology to power its architecture with artificial brain cells, driven by a vision of interfacing directly with the human brain to resolve human bandwidth limits and unleash maximum cognitive capacities.</p>
+				</li>
+				<li class="project">
+					<h3>Vespera</h3>
+					<p class="project-desc">An AI-driven healthcare orchestration platform powered by NEHA that carries a patient through the entire continuum of care. It integrates appointment scheduling, predictive hospital availability, dynamic queue tracking, cab and ambulance transport logistics, medicine delivery, insurance integration, and longitudinal medical-record management via privacy-preserving Universal and Temporary Vespera IDs, alongside a unified patient interface for prescription management, lab integration, home-consultation scheduling, real-time care navigation, and secure, time-limited clinical data sharing with providers and pharmacies. For clinicians and public health, Vespera delivers ambient consultation capture for auto-generated documentation, one-action “Magic Button” administrative automation, real-time “Magic Whispers” decision-support insights, Digital Twin models for pre-intervention testing, Time Machine longitudinal outcome forecasting and protocol comparison, HoloPatient mixed-reality visualization for procedure validation with quantified risk prediction, and population-scale early-warning disease analytics.</p>
+				</li>
+				<li class="project">
+					<h3><a href="https://spiritus.vercel.app/" target="_blank" rel="noopener">Spiritus</a></h3>
+					<p class="project-meta">First Prize at Code reCET 2.0 and InnoFEST25, 2025</p>
+					<p class="project-desc">Spiritus offers direct access to a global network of clinicians, psychotherapists, and licensed mental health professionals, delivering tailored, evidence-based support in various languages for personal transformation and the pursuit of a meaningful existence. Built with React, Node.js, Express, MongoDB, and Gemini, it provides compassionate, accessible online and offline therapy for depression, anxiety, PTSD, stress-related burnout, chronic loneliness, and insomnia to individuals, couples, and teenagers worldwide.</p>
+				</li>
+				<li class="project">
+					<h3>Genus</h3>
+					<p class="project-desc">A cross-platform pet marketplace and community built with Flutter and Firebase that enables seamless connections between buyers, sellers, and pet enthusiasts through intelligent matching algorithms and geolocation-based discovery. It features secure authentication with role-based access control, integrated payment processing, and real-time messaging to bring people who love animals together.</p>
+				</li>
+				<li class="project">
+					<h3><a href="https://socius-eta.vercel.app/" target="_blank" rel="noopener">Socius</a></h3>
+					<p class="project-desc">A mobile-first hyperlocal platform enabling short-term borrowing of everyday goods within verified communities, digitising informal neighborly sharing to reduce unnecessary purchases and promote sustainable access over ownership. Adapting the global “Library of Things” circular-economy model to Indian urban dynamics, Socius combines walkable geofenced discovery across apartments, campuses, and neighbourhood clusters with searchable community inventories, booking management, digital agreements, dispute-resolution tooling, refundable escrow-style deposits, multi-factor verification, and gamified “karma” incentives.</p>
+				</li>
+				<li class="project">
+					<h3><a href="https://costal-adviser.vercel.app/" target="_blank" rel="noopener">Coastal Adviser</a></h3>
+					<p class="project-desc">An AI-powered decision-support platform for Kerala’s coastal fishing communities, integrating real-time maritime safety, market intelligence, and government welfare access with a low-latency voice-to-voice interface using Sarvam AI and OpenAI across all local languages and English for non-literate accessibility. It pairs an automated Playwright pipeline scraping INCOIS advisories (Potential Fishing Zones, wave height, and wind speed across 20+ coastal locations) with 7-day fish market price trend analysis for optimal selling versus cold-storage strategies, a zero-dependency RAG system for semantic search across state and central welfare schemes, and a geofenced hyperlocal personalization engine tailored by boat type and preferred species.</p>
+				</li>
+				<li class="project">
+					<h3><a href="https://starbase-x.vercel.app/" target="_blank" rel="noopener">Starbase</a></h3>
+					<p class="project-desc">A database-driven material selection and recommendation system built for engineering and research, drawing on 6.1 million rows of source-traced data across metals, polymers, ceramics, and composites to help students, engineers, designers, and researchers identify the optimal material for any application. Replacing manual searches through material handbooks, Starbase queries user requirements—application, operating conditions, load, temperature range, corrosion resistance, weight, manufacturing process, and budget—against a centralised, scalable database to return the best-matching materials with their key properties, justifications, and original sources.</p>
+				</li>
+				<li class="project">
+					<h3>Medical Ward</h3>
+					<p class="project-desc">Initiated at the request of the Government Medical College Hospital to resolve its acute bedding crisis—an effort that goes beyond bed allocation to rethink the medical ward from its roots up, reimagining how ward spaces, care workflows, and inpatient infrastructure work together to serve patients directly.</p>
+				</li>
+				<li class="project">
+					<h3>Sudarshana</h3>
+					<p class="project-meta">Classified</p>
+					<div class="redaction" role="img" aria-label="Details classified"><span></span><span></span><span></span></div>
+				</li>
+				<li class="project">
+					<h3>Symposium</h3>
+					<p class="project-meta">Classified</p>
+					<div class="redaction" role="img" aria-label="Details classified"><span></span><span></span><span></span></div>
+				</li>
+				<li class="project">
+					<h3>Angelus</h3>
+					<p class="project-desc">The third-stage biotechnology frontier following Spiritus and Vespera, moving beyond clinical treatment toward fundamental biological advancement. Angelus focuses on pioneering gene editing, cellular agriculture, and novel bio-engineering to eliminate disease at its root, build a sustainable future for humanity, and unbind human potential.</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<script>
+		(function () {
+			var view = document.getElementById("projects");
+			var home = document.querySelector("body > section");
+			var trigger = document.querySelector('nav a[href="#projects"]');
+
+			function setOpen(open) {
+				if (open === view.classList.contains("open")) return;
+				view.classList.toggle("open", open);
+				home.inert = open;
+				if (open) {
+					view.scrollTop = 0;
+					view.focus({ preventScroll: true });
+				} else if (trigger) {
+					trigger.focus();
+				}
+			}
+
+			function setHash(value) {
+				try { location.hash = value; } catch (e) { }
+			}
+
+			trigger.addEventListener("click", function (e) {
+				e.preventDefault();
+				setOpen(true);
+				setHash("projects");
+			});
+
+			document.addEventListener("keydown", function (e) {
+				if (e.key === "Escape" && view.classList.contains("open")) {
+					setOpen(false);
+					setHash("");
+				}
+			});
+
+			window.addEventListener("hashchange", function () {
+				setOpen(location.hash === "#projects");
+			});
+
+			setOpen(location.hash === "#projects");
+		})();
+	</script>
 </body>
 
 </html>
